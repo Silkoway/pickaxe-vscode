@@ -1,0 +1,57 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Pickaxe",
+	"patterns": [
+		{
+			"include": "overwrite"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"overwrite": {
+			"patterns": [
+				{
+					"name": "meta.pickaxe",
+					"match": ","
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.pickaxe.pickaxe",
+					"match": "\\b(if|while|for|return)\\b"
+				},
+				{
+					"name": "entity.name.function.pickaxe",
+					"match": "\\b(?<=(event|macro|fn)) +[a-zA-Z0-9_]+\\b"
+				},
+				{
+					"name": "storage.type.pickaxe",
+					"match": "\\b(fn|macro|event|import)\\b"
+				},
+				{
+					"name": "variable.parameter.pickaxe",
+					"match": "(?<=\\()([^\\)]+)(?=\\))"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.pickaxe",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.pickaxe",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.pick"
+}

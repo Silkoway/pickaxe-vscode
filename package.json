@@ -1,0 +1,25 @@
+{
+    "name": "pickaxe-lang",
+    "displayName": "Pickaxe Lang",
+    "description": "Language support for the pickaxe language",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.72.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "pickaxe",
+            "aliases": ["Pickaxe", "pickaxe"],
+            "extensions": [".pick"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "pickaxe",
+            "scopeName": "source.pick",
+            "path": "./syntaxes/pickaxe.tmLanguage.json"
+        }]
+    }
+}
